@@ -70,7 +70,7 @@ create table if not exists oauth_client_token (
   authentication_id VARCHAR(256) PRIMARY KEY,
   user_name VARCHAR(256),
   client_id VARCHAR(256)
-);
+) engine=innodb;
 
 create table if not exists oauth_access_token (
   token_id VARCHAR(256),
@@ -80,17 +80,17 @@ create table if not exists oauth_access_token (
   client_id VARCHAR(256),
   authentication LONG VARBINARY,
   refresh_token VARCHAR(256)
-);
+) engine=innodb;
 
 create table if not exists oauth_refresh_token (
   token_id VARCHAR(256),
   token LONG VARBINARY,
   authentication LONG VARBINARY
-);
+) engine=innodb;
 
 create table if not exists oauth_code (
   code VARCHAR(256), authentication LONG VARBINARY
-);
+) engine=innodb;
 
 create table if not exists oauth_approvals (
 	userId VARCHAR(256),
@@ -99,12 +99,4 @@ create table if not exists oauth_approvals (
 	status VARCHAR(10),
 	expiresAt TIMESTAMP,
 	lastModifiedAt TIMESTAMP
-);
-
-
-
-
-
-
-
-
+) engine=innodb;
