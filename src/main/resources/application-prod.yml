@@ -3,7 +3,7 @@ spring:
     gcp:
       sql:
         enabled: true
-        instance-connection-name: spring-carving-278907:asia-south1:postgres-instance
+        instance-connection-name: spring-carving-278907:asia-south1:instance-postgres
         database-name: rent_authDB
   datasource:
     username: postgres
