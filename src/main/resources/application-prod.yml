@@ -3,7 +3,7 @@ spring:
     gcp:
       sql:
         enabled: true
-        instance-connection-name: spring-carving-278907:us-central1:mysql-instance
+        instance-connection-name: spring-carving-278907:us-central1:mysql-instance?useSSL=false
         database-name: rent_authDB
   datasource:
     username: root
